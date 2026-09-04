@@ -1,0 +1,904 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ArenaBPL – Fantasy Calcio Premier League 2026/27 | Gioco Gratis</title>
+
+  <!-- Identità -->
+  <meta name="author" content="Lorenzo Simonazzi">
+  <meta name="copyright" content="© 2026 Lorenzo Simonazzi. Tutti i diritti riservati.">
+  <meta name="application-name" content="ArenaBPL">
+  <meta name="theme-color" content="#180A1E">
+  <meta name="robots" content="index, follow">
+
+  <!-- SEO -->
+  <meta name="description" content="ArenaBPL: il gioco di fantasy calcio della Premier League 2026/27, completamente gratuito. Rosa da 20 club, lega privata con gli amici, voti live da SofaScore. Gioca subito, senza download né registrazione.">
+  <meta name="keywords" content="ArenaBPL, fantasy calcio premier league, fantasy premier league 2026, fantasy football premier league, fantasy calcio premier league gratis, lega privata fantasy premier league, rosa premier league fantasy, gioco fantasy premier league, fantasy calcio premier league gratuito, fantasy football premier league, premier league fantasy game, premier league fantasy 2026, free premier league fantasy football, english football fantasy game, private premier league fantasy league, build your premier league squad">
+  <link rel="canonical" href="https://fantaarena.it/premier/">
+
+  <!-- Hreflang IT / EN / default -->
+  <link rel="alternate" hreflang="it" href="https://fantaarena.it/premier/?lang=it">
+  <link rel="alternate" hreflang="en" href="https://fantaarena.it/premier/?lang=en">
+  <link rel="alternate" hreflang="x-default" href="https://fantaarena.it/premier/">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" href="logo.png" sizes="any">
+  <link rel="apple-touch-icon" href="logo.png">
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ArenaBPL – Fantasy Calcio Premier League 2026/27 Gratis">
+  <meta property="og:description" content="Il gioco di fantasy calcio della Premier League 2026/27, gratis. Un club per ogni giocatore, voti live da SofaScore, lega privata con gli amici. Gioca subito, senza download.">
+  <meta property="og:url" content="https://fantaarena.it/premier/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ArenaBPL">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:image" content="https://fantaarena.it/premier/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="ArenaBPL – Fantasy Football Premier League 2026/27">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ArenaBPL – Fantasy Calcio Premier League 2026/27 Gratis">
+  <meta name="twitter:description" content="Il gioco di fantasy calcio della Premier League 2026/27. 20 club, lega privata, voti live. Gratis, senza download.">
+  <meta name="twitter:image" content="https://fantaarena.it/premier/og-image.png">
+  <meta name="twitter:image:alt" content="ArenaBPL – Fantasy Football Premier League 2026/27">
+
+  <!-- Performance: preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://www.gstatic.com">
+  <link rel="dns-prefetch" href="https://fantapremier-61ad1-default-rtdb.europe-west1.firebasedatabase.app">
+
+  <!-- Structured Data: WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "ArenaBPL",
+    "alternateName": ["ArenaBPL – Fantasy Calcio Premier League 2026/27", "Fantasy Football Premier League 2026/27", "Gioco Fantasy Premier League Gratis"],
+    "url": "https://fantaarena.it/premier/",
+    "description": "Piattaforma di gioco fantasy calcio dedicata alla Premier League 2026/27. Completamente gratuita.",
+    "inLanguage": ["it", "en"],
+    "author": {
+      "@type": "Person",
+      "name": "Lorenzo Simonazzi"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: WebApplication (il gioco) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "ArenaBPL – Fantasy Calcio Premier League 2026/27",
+    "alternateName": "Gioco Fantasy Calcio Premier League 2026/27 Gratis",
+    "url": "https://fantaarena.it/premier/",
+    "description": "Il gioco di fantasy calcio gratuito della Premier League 2026/27. Costruisci una rosa di 20 giocatori (uno per club), scegli il capitano e sfida i tuoi amici in una lega privata con voti live.",
+    "applicationCategory": "GameApplication",
+    "applicationSubCategory": "FantasySports",
+    "operatingSystem": "Web",
+    "browserRequirements": "HTML5, JavaScript",
+    "inLanguage": ["it", "en"],
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock"
+    },
+    "screenshot": "https://fantaarena.it/premier/logo.png",
+    "featureList": [
+      "Lega privata con amici",
+      "Rosa di 20 giocatori (uno per club Premier League)",
+      "Voti e statistiche live da SofaScore",
+      "Bonus e malus per ruolo",
+      "Capitano con bonus speciale",
+      "6 finestre di sostituzione durante la stagione"
+    ]
+  }
+  </script>
+
+  <!-- Structured Data: SportsEvent (Premier League) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsEvent",
+    "name": "Premier League 2026/27",
+    "startDate": "2026-08-22",
+    "endDate": "2027-05-30",
+    "sport": "https://schema.org/Soccer",
+    "description": "Il campionato inglese di Premier League 2026/27 con 20 club, 38 giornate.",
+    "location": { "@type": "Country", "name": "England" },
+    "organizer": {
+      "@type": "Organization",
+      "name": "Premier League",
+      "url": "https://www.premierleague.com"
+    }
+  }
+  </script>
+
+  <!-- GA4 Consent Mode v2: tag sempre presente, raccolta bloccata fino al consenso -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      wait_for_update: 500
+    });
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TODO_GA_ID"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-TODO_GA_ID', { anonymize_ip: true });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preload" href="style.css" as="style">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <!-- Firebase -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+    import { getDatabase, ref, set, onValue, push, onChildAdded, remove, query, limitToLast } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+    import { getAuth } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+    window._fbReady = false;
+
+    // ══════════════════════════════════════════════════════════
+    //  CONFIGURAZIONE FIREBASE — segui questi 5 passi:
+    //
+    //  1. Vai su https://console.firebase.google.com
+    //  2. Crea un nuovo progetto (o seleziona uno esistente)
+    //  3. Nel progetto → Realtime Database → "Crea database"
+    //     → scegli una regione (es. europe-west1)
+    //     → avvia in "modalità test" (lettura/scrittura libera)
+    //  4. Vai su Impostazioni progetto (icona ⚙ in alto a sinistra)
+    //     → "App Web" → Registra app → copia il blocco firebaseConfig
+    //  5. Incolla i valori qui sotto sostituendo i placeholder
+    //
+    //  ⚠ Dopo la configurazione, nella console Firebase vai su
+    //     Realtime Database → Regole e imposta:
+    //     { "rules": { ".read": true, ".write": true } }
+    //     (solo per uso privato tra amici — aggiungi autenticazione
+    //      se vuoi più sicurezza in futuro)
+    // ══════════════════════════════════════════════════════════
+    const firebaseConfig = {
+      // ⚠️ TODO ArenaBPL — sostituire con la config del NUOVO progetto Firebase
+      // (Console Firebase → Impostazioni progetto → Le tue app → SDK setup).
+      apiKey: "TODO_FIREBASE_APIKEY",
+      authDomain: "TODO-PROJECT.firebaseapp.com",
+      databaseURL: "https://TODO-PROJECT-default-rtdb.europe-west1.firebasedatabase.app",
+      projectId: "TODO-PROJECT",
+      storageBucket: "TODO-PROJECT.firebasestorage.app",
+      messagingSenderId: "TODO_SENDER_ID",
+      appId: "TODO_APP_ID",
+      measurementId: "TODO_MEASUREMENT_ID"
+    };
+    // ══════════════════════════════════════════════════════════
+
+    try {
+      const app = initializeApp(firebaseConfig);
+      const db = getDatabase(app);
+      window._db = db;
+      window._ref = ref;
+      window._set = set;
+      window._onVal = onValue;
+      window._push = push;
+      window._onChildAdded = onChildAdded;
+      window._query = query;
+      window._limitToLast = limitToLast;
+      window._remove = remove;
+      window._fbAuth = getAuth(app);
+      window._fbReady = true;
+    } catch (e) {
+      console.warn("Firebase non configurato, usando solo localStorage.", e.message);
+    }
+  </script>
+</head>
+
+<body>
+<div id="authLoader" class="auth-loader" aria-hidden="true">
+  <div class="auth-loader-ring"></div>
+</div>
+  <div id="app">
+    <nav class="nav">
+      <button class="hamburger" id="hamburger" style="display:none" aria-label="Apri menu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+      <div class="nav-logo"><span class="nav-logo-full">🏆 Arena<span>BPL</span></span><span class="nav-logo-short">🏆 <span>BPL</span></span></div>
+      <div class="nav-right">
+        <button class="nav-lang-btn" id="langSwitcher" onclick="toggleLang()" title="Switch language">🇬🇧 EN</button>
+        <button class="nav-push-btn" id="btnPushToggle" title="Notifiche">🔔</button>
+        <button class="nav-profile-btn" id="btnSidebar" onclick="toggleSidebar()" title="Profilo e Leghe" data-i18n-title="nav.profile_title">
+          <span id="navProfileIcon" class="material-symbols-outlined">account_circle</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Drawer overlay -->
+    <div id="drawerOverlay" class="drawer-overlay"></div>
+
+    <!-- Sidebar nav drawer -->
+    <div class="nav-links" id="navLinks">
+      <div class="drawer-header">
+        <div class="drawer-brand">🏆 Arena<span>BPL</span></div>
+        <button class="drawer-close-btn" id="drawerClose" aria-label="Chiudi menu">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <nav class="drawer-nav">
+        <button class="nav-btn active" data-page="home"><span class="material-symbols-outlined">home</span> <span data-i18n="nav.home">Home</span></button>
+        <button class="nav-btn" data-page="regolamento"><span class="material-symbols-outlined">menu_book</span> <span data-i18n="nav.regolamento">Regolamento</span></button>
+        <button class="nav-btn" data-page="classifica"><span class="material-symbols-outlined">leaderboard</span> <span data-i18n="nav.classifica">Classifica</span></button>
+        <button class="nav-btn" data-page="stats"><span class="material-symbols-outlined">bar_chart</span> <span data-i18n="nav.stats">Statistiche</span></button>
+        <button class="nav-btn" data-page="giornata"><span class="material-symbols-outlined">calendar_month</span> <span data-i18n="nav.giornata">Giornata</span></button>
+        <button class="nav-btn" data-page="squadra"><span class="material-symbols-outlined">shield</span> <span data-i18n="nav.squadra">La mia Squadra</span></button>
+        <button class="nav-btn" data-page="giocatori"><span class="material-symbols-outlined">groups</span> <span data-i18n="nav.giocatori">Giocatori</span></button>
+        <button class="nav-btn" data-page="chat"><span class="material-symbols-outlined">forum</span> <span data-i18n="nav.chat">Chat</span></button>
+        <button class="nav-btn" data-page="admin"><span class="material-symbols-outlined">settings</span> <span data-i18n="nav.admin">Admin</span> <span id="adminLockIcon">🔒</span></button>
+      </nav>
+    </div>
+
+    <!-- Sync status bar -->
+    
+    <!-- Sidebar overlay -->
+    <div id="sidebarOverlay" class="sidebar-overlay" onclick="closeSidebar()"></div>
+
+    <!-- Sidebar drawer -->
+    <div id="sidebar" class="sidebar">
+      <div class="sidebar-header">
+        <span class="sidebar-title" data-i18n="sidebar.title">Menu</span>
+        <button class="sidebar-close" onclick="closeSidebar()">✕</button>
+      </div>
+      <div id="sidebarContent" class="sidebar-content">
+        <div class="sidebar-loading">⏳ <span data-i18n="common.loading">Caricamento...</span></div>
+      </div>
+    </div>
+
+    <!-- Superadmin modal -->
+    <div id="superadminModal" class="modal-overlay" style="display:none">
+      <div class="modal" style="max-width:360px">
+        <div class="modal-header">
+          <h3 data-i18n="modal.superadmin_title">⚡ Superadmin</h3>
+          <button class="modal-close" onclick="document.getElementById('superadminModal').style.display='none'">✕</button>
+        </div>
+        <div class="modal-body">
+          <div class="field-group"><label data-i18n="modal.superadmin_pwd">Password</label><input type="password" id="superModalPwd" placeholder="Password superadmin..." data-i18n-ph="modal.superadmin_placeholder"></div>
+          <button class="btn-primary" id="btnSuperModalSubmit" style="width:100%;margin-top:8px" data-i18n="modal.superadmin_btn">Accedi</button>
+          <p class="pwd-error" id="superModalErr"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lega info banner -->
+    <div id="legaInfoBanner" class="lega-info-bar" style="display:none;align-items:center;gap:8px;flex-wrap:wrap"></div>
+
+    <div id="syncBar" class="sync-bar" style="display:none"></div>
+    <div id="swUpdateBar" style="display:none;position:fixed;top:70px;left:0;right:0;z-index:500;background:var(--accent);color:#000;font-size:14px;font-weight:600;text-align:center;padding:10px 16px;box-shadow:0 4px 12px rgba(0,0,0,.4)">
+      <span data-i18n="sw.new_version">🔄 Nuova versione disponibile —</span> <button onclick="window._swUpdate()" style="margin-left:8px;background:#000;color:var(--accent);border:none;border-radius:6px;padding:4px 14px;font-weight:700;cursor:pointer;font-size:13px" data-i18n="sw.update_now">Aggiorna ora</button>
+    </div>
+
+    <main class="main">
+      <section id="page-superadmin" class="page"><div id="superadminContent"></div></section>
+
+
+      <!-- HOME -->
+      <section id="page-home" class="page active">
+        <div class="home-hero">
+          <div class="home-hero-text">
+            <h1 class="glitch" data-text="ArenaBPL">Arena<span class="hero-break"></span>BPL</h1>
+            <h2 data-i18n="hero.subtitle">Fantasy Football · Premier League 2026/27</h2>
+            <p data-i18n="hero.desc">La piattaforma di giochi fantasy sul calcio. Gioca con la Premier League 2026/27 e domina il campionato con i tuoi amici.</p>
+            <div class="home-hero-btns" id="homeHeroBtns">
+              <button class="btn-primary" onclick="toggleSidebar()" data-i18n="hero.login">Accedi</button>
+              <button class="btn-sec" onclick="toggleSidebarRegister()" data-i18n="hero.register">Registrati</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="home-intro-section">
+          <h2 class="section-title"><span class="material-symbols-outlined" style="margin-right:8px;">gavel</span>
+            <span data-i18n="intro.title">Cos'è ArenaBPL?</span></h2>
+          <p class="home-intro-text" data-i18n="intro.p1">
+            <strong>ArenaBPL</strong> è il <strong>gioco di fantasy football dedicato alla Premier League 2026/27</strong>.
+            Crea la tua lega privata, costruisci una rosa di <strong>20 giocatori</strong> — uno per ogni club — e sfida i tuoi amici per tutte le <strong>38 giornate</strong> di campionato.
+          </p>
+          <p class="home-intro-text" data-i18n="intro.p2">
+            Il regolamento è semplice: ogni giocatore della tua rosa accumula punti in base alle prestazioni reali in campo.
+            I voti, i bonus ed i malus si basano sulle statistiche ufficiali fornite da <strong>SofaScore</strong>, ma fai attenzione perché
+            ai nostri bonus piace cambiare in base al ruolo del giocatore.. e scegli con cura il tuo
+            <strong>Capitano</strong>! Potrà rivelarsi l'arma in più per battere i tuoi amici e vincere il torneo.
+          </p>
+          <p class="home-intro-text" data-i18n="home_extra.intro_p3">
+            ArenaBPL è pensato per gruppi di amici: niente iscrizioni obbligatorie, niente costi nascosti.
+            Crei la lega in un minuto, condividi il link e sei pronto. Funziona su qualsiasi dispositivo,
+            anche senza connessione grazie alla <strong>Progressive Web App</strong>.
+          </p>
+        </div>
+
+        <div class="home-rules-section">
+          <h2 class="section-title"><span class="material-symbols-outlined" style="margin-right:8px;">checklist</span><span data-i18n="rules.section_title">Il Regolamento</span></h2>
+          <div class="rules-grid-fullwidth">
+              <div class="rule-card">
+                <div class="rule-icon"><span class="material-symbols-outlined">sports_soccer</span></div>
+                <h3 data-i18n="rules.goals_title">Gol e Bonus</h3>
+                <p data-i18n="rules.goals_text">I bonus variano in base al ruolo: <strong>Gol di portieri e difensori +5</strong>, <strong>centrocampisti +4</strong>, <strong>attaccanti +3</strong>.<br>
+                  Anche gli assist cambiano: <strong>+2</strong> per portieri e difensori, <strong>+1,5</strong> per centrocampisti, <strong>+1</strong> per attaccanti.<br>
+                  Se un giocatore <strong>non scende in campo</strong> (SV) ottiene <strong>0 punti</strong>.
+                </p>
+              </div>
+              <div class="rule-card">
+                <div class="rule-icon"><span class="material-symbols-outlined">front_hand</span></div>
+                <h3 data-i18n="rules.malus_title">Malus Decisivi</h3>
+                <p data-i18n="rules.malus_text"><strong>Espulsione −1</strong>, <strong>Ammonizione −0,5</strong>, <strong>Autogol −2</strong>, <strong>Rigore sbagliato −3</strong>.<br>
+                  I malus si sommano al voto base: un giocatore con voto 6,5 e un'ammonizione vale 6,0.</p>
+              </div>
+              <div class="rule-card">
+                <div class="rule-icon"><span class="material-symbols-outlined">star</span></div>
+                <h3 data-i18n="rules.captain_title">Capitano</h3>
+                <p data-i18n="rules.captain_text">Scegli con attenzione il tuo Capitano: riceve un bonus <strong>+2</strong> per ogni giornata in cui scende in campo con voto base <strong>≥ 7</strong>. Non puoi scegliere un attaccante come capitano. <strong>Il capitano non può essere cambiato né sostituito dopo la conferma della rosa.</strong></p>
+              </div>
+              <div class="rule-card">
+                <div class="rule-icon"><span class="material-symbols-outlined">shield_person</span></div>
+                <h3 data-i18n="rules.keeper_title">Portieri</h3>
+                <p data-i18n="rules.keeper_text"><strong>Porta inviolata +2</strong>. <strong>Rigore parato +3</strong>. <strong>Gol subito −1</strong> (per ogni rete incassata). Scegliere un portiere di una nazionale forte può fare la differenza!</p>
+              </div>
+              <div class="rule-card">
+                <div class="rule-icon"><span class="material-symbols-outlined">swap_horiz</span></div>
+                <h3 data-i18n="rules.subs_title">Sostituzioni</h3>
+                <p data-i18n="rules.subs_text">Hai a disposizione <strong>4 sostituzioni totali</strong> (al massimo <strong>1 per ruolo</strong>) da decidere nell'arco delle <strong>3 giornate dei gironi</strong>. Il giocatore entrante deve avere lo <strong>stesso ruolo e la stessa nazionale</strong> di quello uscente. <strong>Il capitano non può essere sostituito.</strong><br>
+                  Le sostituzioni fatte durante la <strong>Giornata 1</strong> valgono dalla Giornata 2 in poi; quelle della <strong>Giornata 2</strong> dalla Giornata 3 in poi; quelle della <strong>Giornata 3</strong> dalla fase eliminatoria in poi. <strong>Nessun cambio è possibile dalla fase eliminatoria in avanti.</strong></p>
+              </div>
+              <div class="rule-card">
+                <div class="rule-icon"><span class="material-symbols-outlined">assignment_turned_in</span></div>
+                <h3 data-i18n="rules.votes_title">Voti</h3>
+                <p data-i18n="rules.votes_text">I voti e le statistiche sono forniti da <strong>SofaScore.com</strong>. Il voto "normale" per una prestazione sufficiente è <strong>6,5</strong>. In caso di discrepanze tra quanto visualizzato e i dati SofaScore, questi ultimi fanno fede.</p>
+              </div>
+          </div>
+          <div class="home-rules-cta">
+            <button class="btn-primary" onclick="navigate('regolamento')">
+              <span class="material-symbols-outlined" style="vertical-align:-5px;margin-right:6px">menu_book</span>
+              <span data-i18n="rules.read_full">Leggi il regolamento completo</span>
+            </button>
+          </div>
+        </div>
+        <div id="home-winner-banner"></div>
+
+
+      </section>
+
+      <!-- REGOLAMENTO -->
+      <section id="page-regolamento" class="page">
+        <div class="page-header">
+          <h1><span class="material-symbols-outlined header-icon">menu_book</span> <span data-i18n="nav.regolamento">Regolamento</span></h1>
+          <p class="subtitle" data-i18n="rules_full.subtitle">ArenaBPL · Premier League 2026/27 · regole complete</p>
+        </div>
+
+        <div class="rulebook">
+
+          <article class="rulebook-section">
+            <h2><span class="rb-num">1</span> <span data-i18n="rules_full.s1_title">Composizione della rosa</span></h2>
+            <p data-i18n="rules_full.s1_p1">Ogni partecipante seleziona una rosa di <strong>20 giocatori</strong> — <strong>1 per ogni club</strong> partecipante alla Premier League 2026/27.</p>
+            <div class="rb-callout">
+              <span class="material-symbols-outlined">flag</span>
+              <div>
+                <strong data-i18n="rules_full.s1_callout_title">Vincoli obbligatori</strong>
+                <p data-i18n="rules_full.s1_callout_p">È obbligatorio selezionare <strong>1 giocatore per ogni club</strong> partecipante (20 club, 20 giocatori).<br>
+                La rosa va compilata <strong>prima dell'inizio del campionato</strong>. Dopo il fischio d'inizio della prima giornata non sarà più modificabile.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="rulebook-section">
+            <h2><span class="rb-num">2</span> <span data-i18n="rules_full.s2_title">Formazione e voti</span></h2>
+            <p data-i18n="rules_full.s2_p1">Non è necessario inviare una formazione: <strong>tutti i giocatori della rosa vanno automaticamente a voto</strong> in ogni giornata.</p>
+            <p data-i18n="rules_full.s2_p2">In caso di <strong>SV (senza voto)</strong> — giocatore che non scende in campo — viene assegnato <strong>punteggio zero</strong>.</p>
+            <div class="rb-callout">
+              <span class="material-symbols-outlined">verified</span>
+              <div>
+                <strong data-i18n="rules_full.s2_callout_title">Fonte ufficiale dei voti</strong>
+                <p data-i18n="rules_full.s2_callout_p">La redazione di riferimento per voti, bonus e malus è <strong>SofaScore</strong>. In caso di discrepanze, fa fede SofaScore.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="rulebook-section">
+            <h2><span class="rb-num">3</span> <span data-i18n="rules_full.s3_title">Sostituzioni</span></h2>
+            <p data-i18n="rules_full.s3_p1">Hai a disposizione <strong>6 finestre di sostituzione</strong> durante la stagione (una ogni 5 giornate), con questi vincoli:</p>
+            <ul class="rb-list">
+              <li data-i18n="rules_full.s3_li1">Al massimo <strong>3 sostituzioni per ruolo</strong> in tutta la stagione</li>
+              <li data-i18n="rules_full.s3_li2">Il giocatore entrante deve essere dello <strong>stesso club</strong> di quello uscente</li>
+              <li data-i18n="rules_full.s3_li3">Il <strong>Capitano non può essere sostituito</strong></li>
+            </ul>
+            <div class="rb-example">
+              <span class="rb-example-label" data-i18n="rules_full.s3_ex_label">Esempi</span>
+              <div class="rb-example-rows">
+                <div data-i18n="rules_full.s3_ex1">Tolgo <strong>Lautaro</strong> <span class="rb-arrow">→</span> Prendo <strong>Thuram</strong> <span class="rb-naz">(Inter)</span></div>
+                <div data-i18n="rules_full.s3_ex2">Tolgo <strong>Bastoni</strong> <span class="rb-arrow">→</span> Prendo <strong>Bisseck</strong> <span class="rb-naz">(Inter)</span></div>
+              </div>
+            </div>
+            <h3 data-i18n="rules_full.s3_windows_title">Finestre temporali</h3>
+            <ul class="rb-list">
+              <li data-i18n="rules_full.s3_w_li1">Una finestra si apre <strong>ogni 5 giornate</strong> — dopo la G5, G10, G15, G20, G25 e G30 (<strong>6 finestre</strong> in tutto).</li>
+              <li data-i18n="rules_full.s3_w_li2">Le sostituzioni effettuate in una finestra diventano effettive <strong>dalla giornata successiva</strong>.</li>
+              <li data-i18n="rules_full.s3_w_li3">Le sostituzioni non utilizzate <strong>restano disponibili</strong> nelle finestre successive, sempre nel limite di <strong>3 per ruolo</strong> in totale.</li>
+            </ul>
+          </article>
+
+          <article class="rulebook-section">
+            <h2><span class="rb-num">4</span> <span data-i18n="rules_full.s4_title">Bonus e Malus</span></h2>
+
+            <div class="rb-callout rb-callout-accent">
+              <span class="material-symbols-outlined">star</span>
+              <div>
+                <strong data-i18n="rules_full.s4_cap_title">Capitano</strong>
+                <p data-i18n="rules_full.s4_cap_p">Ogni rosa deve avere un Capitano. Il Capitano ottiene <strong>+2 punti</strong> al suo fantavoto ogni volta che riceve un <strong>voto base ≥ 7</strong>.<br>
+                Il Capitano <strong>non può essere un attaccante</strong> e <strong>non può essere cambiato né sostituito</strong> dopo la conferma della rosa.</p>
+              </div>
+            </div>
+
+            <div class="rb-grid">
+              <div class="rb-box">
+                <h3 data-i18n="rules_full.s4_goals_title">⚽ Bonus gol</h3>
+                <table class="rb-table">
+                  <tr><td data-i18n="rules_full.gk_goal">Gol Portiere</td><td class="rb-pos">+5</td></tr>
+                  <tr><td data-i18n="rules_full.def_goal">Gol Difensore</td><td class="rb-pos">+5</td></tr>
+                  <tr><td data-i18n="rules_full.mid_goal">Gol Centrocampista</td><td class="rb-pos">+4</td></tr>
+                  <tr><td data-i18n="rules_full.fwd_goal">Gol Attaccante</td><td class="rb-pos">+3</td></tr>
+                </table>
+              </div>
+
+              <div class="rb-box">
+                <h3 data-i18n="rules_full.s4_assist_title">🎯 Bonus assist</h3>
+                <table class="rb-table">
+                  <tr><td data-i18n="rules_full.gk_assist">Assist Portiere</td><td class="rb-pos">+2</td></tr>
+                  <tr><td data-i18n="rules_full.def_assist">Assist Difensore</td><td class="rb-pos">+2</td></tr>
+                  <tr><td data-i18n="rules_full.mid_assist">Assist Centrocampista</td><td class="rb-pos">+1,5</td></tr>
+                  <tr><td data-i18n="rules_full.fwd_assist">Assist Attaccante</td><td class="rb-pos">+1</td></tr>
+                </table>
+              </div>
+
+              <div class="rb-box">
+                <h3 data-i18n="rules_full.s4_gk_title">🧤 Bonus portiere</h3>
+                <table class="rb-table">
+                  <tr><td data-i18n="rules_full.clean_sheet">Porta inviolata</td><td class="rb-pos">+2</td></tr>
+                  <tr><td data-i18n="rules_full.pen_saved">Rigore parato</td><td class="rb-pos">+3</td></tr>
+                  <tr><td data-i18n="rules_full.goal_conceded">Gol subito</td><td class="rb-neg">−1</td></tr>
+                </table>
+              </div>
+
+              <div class="rb-box">
+                <h3 data-i18n="rules_full.s4_malus_title">🟥 Malus</h3>
+                <table class="rb-table">
+                  <tr><td data-i18n="rules_full.yellow">Ammonizione</td><td class="rb-neg">−0,5</td></tr>
+                  <tr><td data-i18n="rules_full.red">Espulsione</td><td class="rb-neg">−1</td></tr>
+                  <tr><td data-i18n="rules_full.own_goal">Autogol</td><td class="rb-neg">−2</td></tr>
+                  <tr><td data-i18n="rules_full.pen_missed">Rigore sbagliato</td><td class="rb-neg">−3</td></tr>
+                </table>
+              </div>
+            </div>
+            <p class="rb-note" data-i18n="rules_full.s4_note">I bonus e i malus si sommano al voto base. Esempio: un giocatore con voto <strong>6,5</strong> e un'ammonizione totalizza <strong>6,0</strong>.</p>
+          </article>
+
+          <article class="rulebook-section">
+            <h2><span class="rb-num">5</span> <span data-i18n="rules_full.s5_title">Risultati e classifica</span></h2>
+            <ul class="rb-list">
+              <li data-i18n="rules_full.s5_li1">Il gioco termina alla <strong>38ª giornata</strong> di campionato.</li>
+              <li data-i18n="rules_full.s5_li2">La classifica è determinata dalla <strong>somma totale dei punteggi di ogni giornata</strong>.</li>
+              <li data-i18n="rules_full.s5_li3">Vince chi totalizza il <strong>punteggio complessivo più alto</strong> al termine della stagione.</li>
+            </ul>
+          </article>
+
+          <div class="rulebook-back">
+            <button class="btn-sec" onclick="navigate('home')">← <span data-i18n="rules.back_home">Torna alla Home</span></button>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- STATISTICHE LEGA -->
+      <section id="page-stats" class="page">
+        <div class="page-header">
+          <h1><span class="material-symbols-outlined header-icon">bar_chart</span> <span data-i18n="stats.h1">Statistiche Lega</span></h1>
+          <p class="subtitle" data-i18n="stats.subtitle">Analisi rose · Punteggi · Tracker Sostituzioni</p>
+        </div>
+        <div id="stats-content"></div>
+      </section>
+
+      <!-- CLASSIFICA -->
+      <section id="page-classifica" class="page">
+        <div class="page-header">
+          <h1><span class="material-symbols-outlined header-icon">emoji_events</span> <span data-i18n="nav.classifica">Classifica</span></h1>
+          <p class="subtitle" data-i18n="classifica.subtitle">Premier League 2026/27 – Aggiornamento live</p>
+        </div>
+        <div class="hero-banner">
+          <div class="hero-trophy"><span class="material-symbols-outlined"
+              style="font-size:80px;color:#FCD34D;">emoji_events</span></div>
+          <div class="hero-text">
+            <h2 data-i18n="intro.wc_title">Premier League 2026/27</h2>
+            <p data-i18n="intro.wc_desc">20 club &nbsp;·&nbsp; 38 giornate &nbsp;·&nbsp; Agosto 2026 – Maggio 2027</p>
+          </div>
+        </div>
+        <div class="classifica-table-wrap">
+          <table class="classifica-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th data-i18n="classifica.col_name">Partecipante</th>
+                <th class="sortable" data-sort="giornata" data-i18n="classifica.sort_day">Giornata corrente ↕</th>
+                <th class="sortable active-sort" data-sort="totale" data-i18n="classifica.sort_total">Totale ↕</th>
+              </tr>
+            </thead>
+            <tbody id="classificaTbody"></tbody>
+          </table>
+        </div>
+        <div id="graficoWrap" class="grafico-wrap" style="margin-top:20px"></div>
+      </section>
+
+      <!-- GIORNATA -->
+      <section id="page-giornata" class="page">
+        <div class="page-header">
+          <h1><span class="material-symbols-outlined header-icon">calendar_month</span> <span data-i18n="nav.giornata">Giornata</span></h1>
+          <p class="subtitle" data-i18n="giornata.subtitle">Rose di tutti i partecipanti con voti aggiornati</p>
+        </div>
+        <div class="giornata-filter-bar">
+          <div class="filter-item">
+            <label data-i18n="ui.matchday">Giornata</label>
+            <select id="giornataSelectGiornata"></select>
+          </div>
+          <div class="filter-item">
+            <label data-i18n="ui.search_label">Cerca</label>
+            <input type="text" id="giornataSearch" placeholder="Nome partecipante..." data-i18n-ph="giornata.search_placeholder" style="min-width:160px">
+          </div>
+          <button class="btn-sec" id="btnExpandAll"><span class="material-symbols-outlined">unfold_more</span>
+            <span data-i18n="giornata.expand">Espandi</span></button>
+          <button class="btn-sec" id="btnCollapseAll"><span class="material-symbols-outlined">unfold_less</span>
+            <span data-i18n="giornata.collapse">Chiudi</span></button>
+        </div>
+        <div id="giornataSummary" class="giornata-summary"></div>
+        <div id="giornataAccordion"></div>
+      </section>
+
+      <!-- VOTI SQUADRE -->
+      <section id="page-voti" class="page">
+        <div id="votiContent">
+          <div class="page-header"
+            style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+            <div>
+              <h1><span class="material-symbols-outlined header-icon">assignment</span> <span data-i18n="voti.title">Voti Squadre</span></h1>
+              <p class="subtitle" id="votiSubtitle" data-i18n="voti.subtitle">Voti ufficiali per ogni giocatore</p>
+            </div>
+            <div id="votiAdminControls" style="display:none;gap:8px;align-items:center;flex-wrap:wrap">
+              <span style="font-size:12px;color:var(--green);font-weight:700;display:flex;align-items:center;"><span
+                  class="material-symbols-outlined" style="font-size:16px;margin-right:4px;">lock_open</span> <span data-i18n="voti.edit_mode">Modalità
+                modifica</span></span>
+              <button class="btn-sec" id="btnLogout"><span class="material-symbols-outlined"
+                  style="font-size:16px;">logout</span> <span data-i18n="voti.exit">Esci</span></button>
+            </div>
+            <div id="votiLoginControls" style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+              <input type="password" id="pwdInput" placeholder="Password admin..." data-i18n-ph="voti.pwd_placeholder" autocomplete="off"
+                style="width:150px">
+              <button class="btn-sec" id="btnUnlock" style="font-size:12px;padding:6px 12px"><span
+                  class="material-symbols-outlined" style="font-size:16px;">lock_open</span> <span data-i18n="voti.edit_btn">Modifica</span></button>
+              <p class="pwd-error" id="pwdError" style="margin:0"></p>
+            </div>
+          </div>
+          <div id="votiReadonlyNote" class="voti-banner" style="display:none" data-i18n="voti_ui.readonly_note">📋 I voti sono gestiti automaticamente (voti live delle partite) e dal gestore della competizione. Questa pagina è in sola lettura.</div>
+          <div class="voti-controls">
+            <div class="filter-item">
+              <label data-i18n="voti.squadra">Squadra</label>
+              <select id="selectSquadra"></select>
+            </div>
+            <div class="filter-item">
+              <label data-i18n="voti.giornata">Giornata</label>
+              <select id="selectGiornata"></select>
+            </div>
+            <button class="btn-primary" id="btnSalvaVoti" style="display:none"><span
+                class="material-symbols-outlined">save</span> <span data-i18n="voti.save">Salva voti</span></button>
+          </div>
+          <!-- voti giocatori pending warning -->
+          <div id="votiBanner" class="voti-banner" style="display:none"></div>
+          <div id="votiTable" class="voti-table-wrap"></div>
+        </div>
+      </section>
+
+      <!-- SQUADRA -->
+      <section id="page-squadra" class="page">
+        <div id="squadraContent"></div>
+      </section>
+
+      <!-- GIOCATORI -->
+      <section id="page-giocatori" class="page">
+        <div class="page-header">
+          <h1><span class="material-symbols-outlined header-icon">groups</span> <span data-i18n="nav.giocatori">Giocatori</span></h1>
+          <p class="subtitle" data-i18n="giocatori.subtitle">Database giocatori selezionabili – aggiornato dal superadmin</p>
+        </div>
+        <div class="giocatori-toolbar">
+          <div class="giocatori-search-wrap">
+            <span class="material-symbols-outlined" style="color:var(--text2);font-size:18px">search</span>
+            <input type="text" id="giocatoriSearch" placeholder="Cerca giocatore o squadra..." data-i18n-ph="giocatori.search_placeholder" autocomplete="off">
+          </div>
+          <div class="giocatori-filtri">
+            <button class="gioc-filtro-btn active" data-ruolo="tutti" data-i18n="giocatori.all">Tutti</button>
+            <button class="gioc-filtro-btn" data-ruolo="P" data-i18n="giocatori.portieri">🧤 Portieri</button>
+            <button class="gioc-filtro-btn" data-ruolo="D" data-i18n="giocatori.difensori">🛡 Difensori</button>
+            <button class="gioc-filtro-btn" data-ruolo="C" data-i18n="giocatori.centrocampisti">⚙️ Centrocampisti</button>
+            <button class="gioc-filtro-btn" data-ruolo="A" data-i18n="giocatori.attaccanti">⚽ Attaccanti</button>
+          </div>
+          <div id="giocatoriCount" class="giocatori-count"></div>
+        </div>
+        <div id="giocatoriTabellone"></div>
+      </section>
+
+      <!-- CHAT -->
+      <section id="page-chat" class="page">
+        <div class="page-header">
+          <h1><span class="material-symbols-outlined header-icon">forum</span> <span data-i18n="chat.h1">Chat di Lega</span></h1>
+          <p class="subtitle" data-i18n="chat.subtitle">Messaggi in tempo reale con la tua lega</p>
+        </div>
+        <div id="chatWrap" class="chat-wrap">
+          <div id="chatMessages" class="chat-messages"></div>
+          <div class="chat-input-row">
+            <input type="text" id="chatInput" class="chat-input" placeholder="Scrivi un messaggio..." maxlength="300" autocomplete="off" data-i18n-ph="chat.ph">
+            <button id="btnChatSend" class="btn-primary chat-send-btn">
+              <span class="material-symbols-outlined">send</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ADMIN -->
+      <section id="page-admin" class="page">
+        <div id="adminLocked" class="locked-screen">
+          <div class="locked-box">
+            <div class="locked-icon"><span class="material-symbols-outlined locked-icon-sym">lock_person</span></div>
+            <h2 data-i18n="admin.locked_title">Area Riservata</h2>
+            <p data-i18n="admin.locked_text">Questa sezione è accessibile solo all'amministratore della lega.</p>
+            <p class="pwd-error" id="adminPwdError"></p>
+          </div>
+        </div>
+        <div id="adminContent" style="display:none">
+          <div class="page-header"
+            style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+            <div>
+              <h1><span class="material-symbols-outlined header-icon">settings</span> <span data-i18n="admin.title">Amministrazione</span></h1>
+              <p class="subtitle" data-i18n="admin.subtitle">Gestione partecipanti e rose</p>
+            </div>
+            <button class="btn-sec" id="btnAdminLogout"><span class="material-symbols-outlined">logout</span>
+              <span data-i18n="admin.exit">Esci</span></button>
+          </div>
+          <div class="admin-grid">
+
+            <div class="admin-card">
+              <h3><span class="material-symbols-outlined">people</span> <span data-i18n="admin.participants">Partecipanti</span> <span id="partecipantiCounter"
+                  style="font-size:14px;color:var(--accent);font-family:'Inter',sans-serif;font-weight:700"></span></h3>
+              <div id="adminRoseStatus" class="rose-status-bar"></div>
+              <div class="partecipanti-list" id="partecipantiList"></div>
+              <div class="add-partecipante">
+                <input type="text" id="newPartecipanteNome" placeholder="Nome partecipante" data-i18n-ph="admin.name_placeholder">
+                <button class="btn-primary" id="btnAddPartecipante"><span
+                    class="material-symbols-outlined">person_add</span> <span data-i18n="admin.add">Aggiungi</span></button>
+              </div>
+              <div style="margin-top:10px;padding-top:10px;border-top:1px solid var(--border)">
+                <button class="btn-sec" id="btnResetPartecipanti"
+                  style="color:var(--red);border-color:var(--red);width:100%"><span
+                    class="material-symbols-outlined">delete_forever</span> <span data-i18n="admin.clear">Svuota partecipanti e rose</span></button>
+              </div>
+            </div>
+
+            <div class="admin-card">
+              <h3><span class="material-symbols-outlined">upload_file</span> <span data-i18n="admin.load_squad">Carica Rosa da File</span></h3>
+              <div class="field-group">
+                <label data-i18n="admin.participant_label">Partecipante</label>
+                <select id="selectPartecipanteImport"></select>
+              </div>
+              <div class="upload-box" id="uploadBox">
+                <div class="upload-icon"><span class="material-symbols-outlined upload-icon-sym">cloud_upload</span>
+                </div>
+                <p data-i18n="admin.file_label">Carica file rosa (.csv)</p>
+                <small data-i18n="admin.file_format">Formato: Ruolo,Giocatore,Club</small>
+                <input type="file" id="rosaFileInput" accept=".xlsx,.xls,.csv" style="display:none">
+              </div>
+              <div id="importResult" class="parse-result"></div>
+              <div style="margin-top:14px;border-top:1px solid var(--border);padding-top:14px">
+                <p class="hint" style="margin-bottom:8px" data-i18n="admin.manual_label">Oppure inserisci manualmente:</p>
+                <button class="btn-sec" id="btnManualRosa"><span class="material-symbols-outlined">edit_note</span>
+                  <span data-i18n="admin.manual_btn">Inserimento manuale</span></button>
+              </div>
+            </div>
+
+            
+
+            <div class="admin-card">
+              <h3><span class="material-symbols-outlined">schedule</span> <span data-i18n="admin_ui.deadline_title">Deadline creazione rose</span></h3>
+              <p class="hint" data-i18n="admin_ui.deadline_hint">Fino a questa data/ora i partecipanti possono creare e modificare liberamente la rosa. Dopo, la rosa si blocca e si cambia solo tramite le finestre di sostituzione. Lascia vuoto = nessuna scadenza (rosa sempre modificabile).</p>
+              <div class="field-group">
+                <label data-i18n="admin_ui.datetime_label">Data e ora (fuso locale)</label>
+                <input type="datetime-local" id="adminDeadlineInput">
+              </div>
+              <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
+                <button class="btn-primary" id="btnSalvaDeadline" data-i18n="admin_ui.save_deadline">💾 Salva deadline</button>
+                <button class="btn-sec" id="btnRimuoviDeadline" data-i18n="admin_ui.no_deadline_btn">✕ Nessuna scadenza</button>
+              </div>
+              <div id="adminDeadlineStatus" class="hint" style="margin-top:8px"></div>
+            </div>
+
+            <div class="admin-card">
+              <h3><span class="material-symbols-outlined">star</span> <span data-i18n="admin.captains">Capitani</span></h3>
+              <p class="hint" data-i18n="admin.captains_desc">Imposta il capitano (+2 pt se voto ≥ 7, non attaccanti).</p>
+              <div id="capitanoForm"></div>
+            </div>
+
+            <div class="admin-card" style="grid-column: 1 / -1">
+              <h3><span class="material-symbols-outlined">swap_horiz</span> <span data-i18n="admin.subs">Sostituzioni</span></h3>
+              <p class="hint" data-i18n="admin.subs_desc">4 sostituzioni totali per partecipante • al massimo 1 per ruolo in tutto il torneo • stesso ruolo e stessa nazionale.</p>
+              <div id="sostituzioniForm"></div>
+            </div>
+
+            <div class="admin-card" id="adminPushCard">
+              <h3><span class="material-symbols-outlined">notifications_active</span> <span data-i18n="admin_ui.push_notifications">Notifiche Push</span></h3>
+              <p class="hint" data-i18n="admin_ui.push_hint">Invia una notifica push a tutti i partecipanti che l'hanno attivata.</p>
+              <div id="pushSubCount" class="hint" style="margin-bottom:12px;color:var(--accent)"></div>
+              <div class="field-group" style="margin-bottom:8px">
+                <label data-i18n="admin_ui.title_label">Titolo</label>
+                <input type="text" id="pushTitle" value="ArenaBPL" placeholder="Titolo notifica" maxlength="80" data-i18n-ph="admin_ui.ph_push_title">
+              </div>
+              <div class="field-group" style="margin-bottom:12px">
+                <label data-i18n="admin_ui.message_label">Messaggio</label>
+                <input type="text" id="pushBody" placeholder="Testo notifica" maxlength="200" value="Voti disponibili! Controlla la classifica 🏆" data-i18n-ph="admin_ui.ph_push_body">
+              </div>
+              <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+                <button class="btn-primary" id="btnSendPush">
+                  <span class="material-symbols-outlined">send</span> <span data-i18n="admin_ui.send_all">Invia a tutti</span>
+                </button>
+                <button class="btn-sec" id="btnPushPresetVoti" style="font-size:12px;padding:5px 10px" data-i18n="admin_ui.preset_voti">⚡ "Voti pronti"</button>
+                <button class="btn-sec" id="btnPushPresetClassifica" style="font-size:12px;padding:5px 10px" data-i18n="admin_ui.preset_classifica">🏆 "Classifica aggiornata"</button>
+              </div>
+              <div id="pushSendResult" style="margin-top:10px;font-size:12px"></div>
+            </div>
+
+            <div class="admin-card admin-card-danger" style="grid-column: 1 / -1">
+              <h3><span class="material-symbols-outlined">delete_forever</span> <span data-i18n="admin.danger">Zona Pericolosa</span></h3>
+              <p class="hint" data-i18n="admin.danger_text">Questa azione è <strong>irreversibile</strong>. La lega, tutti i partecipanti, le rose e i voti verranno eliminati definitivamente.</p>
+              <button class="btn-danger" id="btnEliminaLega">🗑️ <span data-i18n="admin.delete_league">Elimina questa Lega</span></button>
+            </div>
+
+            
+
+
+
+            
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer legale -->
+    <footer style="text-align:center;padding:24px 16px 40px;border-top:1px solid var(--border);margin-top:40px;">
+      <p style="color:var(--text2);font-size:13px;margin-bottom:6px;" data-i18n="footer.tagline">🏆 ArenaBPL — Gioco fantasy gratuito a scopo puramente ricreativo e non commerciale</p>
+      <p style="color:var(--text3);font-size:12px;margin-bottom:6px;max-width:700px;margin-left:auto;margin-right:auto;line-height:1.6;">
+        © 2026 <strong style="color:var(--text2)">Lorenzo Simonazzi</strong> <span data-i18n="footer.copyright_post">— Tutti i diritti riservati sul codice e sui contenuti originali di ArenaBPL (fantaarena.it/premier). È vietata la riproduzione, anche parziale, senza autorizzazione scritta dell'autore.</span>
+      </p>
+      <p style="color:var(--text3);font-size:12px;margin-bottom:16px;max-width:700px;margin-left:auto;margin-right:auto;line-height:1.6;" data-i18n="footer.disclaimer">
+        I voti, le statistiche e i dati di gioco sono forniti da <a href="https://www.sofascore.com" target="_blank" rel="noopener" style="color:var(--text2);text-decoration:none;">Sofascore</a>,
+        di cui ArenaBPL non rivendica alcuna proprietà. I nomi, i loghi e i marchi relativi alla Lega Premier League,
+        ai club di calcio e ai calciatori appartengono ai rispettivi titolari e sono citati
+        esclusivamente a scopo informativo e ludico.
+      </p>
+      <div style="display:flex;justify-content:center;gap:20px;flex-wrap:wrap;">
+        <a href="privacy.html" style="color:var(--text2);font-size:13px;text-decoration:none;transition:color .2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text2)'" data-i18n="footer.privacy">Privacy Policy</a>
+        <a href="cookie-policy.html" style="color:var(--text2);font-size:13px;text-decoration:none;transition:color .2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text2)'" data-i18n="footer.cookie">Cookie Policy</a>
+        <a href="termini.html" style="color:var(--text2);font-size:13px;text-decoration:none;transition:color .2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text2)'" data-i18n="footer.terms">Termini e Condizioni</a>
+        <button onclick="resetCookieConsent()" style="background:none;border:none;color:var(--text2);font-size:13px;cursor:pointer;padding:0;text-decoration:none;transition:color .2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text2)'" data-i18n="footer.manage_cookies">Gestisci Cookie</button>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- MODAL inserimento manuale rosa -->
+  <div class="modal-overlay" id="modalManual" style="display:none">
+    <div class="modal">
+      <div class="modal-header">
+        <h3><span class="material-symbols-outlined">edit_note</span> <span data-i18n="modal.manual_title">Inserimento Manuale Rosa</span></h3>
+        <button class="modal-close" id="modalClose">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="field-group" style="margin-bottom:16px">
+          <label data-i18n="admin.participant_label">Partecipante</label>
+          <select id="manualPartSelect" style="width:100%"></select>
+        </div>
+        <div id="manualRosaForm"></div>
+        <button class="btn-primary" id="btnSalvaManual" style="margin-top:16px;width:100%"><span
+            class="material-symbols-outlined">save</span> <span data-i18n="modal.manual_save">Salva Rosa</span></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="matches.js"></script>
+  <script src="i18n.js"></script>
+  <script src="app.js"></script>
+  <!-- Premier League: popola i menu giornata con 38 giornate -->
+  <script>
+    (function () {
+      if (typeof populateGiornataSelects === "function") { populateGiornataSelects(); return; }
+      const lbl = (typeof t === "function") ? t("ui.matchday") : "Giornata";
+      const opts = Array.from({ length: 38 }, (_, i) => `<option value="${i + 1}">${lbl} ${i + 1}</option>`).join("");
+      ["giornataSelectGiornata", "selectGiornata"].forEach(id => {
+        const el = document.getElementById(id);
+        if (el && !el.options.length) el.innerHTML = opts;
+      });
+    })();
+  </script>
+  <!-- Cookie Banner GDPR -->
+  <script src="cookie-banner.js"></script>
+  <!-- PWA: registrazione Service Worker + auto-update -->
+  <script>
+    if ("serviceWorker" in navigator) {
+      let _swWaiting = null;
+      let _swReloading = false;
+
+      const _showUpdateBar = () => {
+        document.getElementById("swUpdateBar").style.display = "block";
+      };
+      window._swUpdate = () => {
+        if (_swWaiting) {
+          _swWaiting.postMessage({ type: "SKIP_WAITING" });
+        } else {
+          window.location.reload();
+        }
+      };
+      const _swReload = () => {
+        if (_swReloading) return;
+        _swReloading = true;
+        window.location.reload();
+      };
+
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("sw.js", { scope: "./" }).then(reg => {
+          reg.update().catch(() => {});
+
+          // SW già in attesa al caricamento → mostra banner
+          if (reg.waiting) {
+            _swWaiting = reg.waiting;
+            _showUpdateBar();
+          }
+
+          reg.addEventListener("updatefound", () => {
+            const nw = reg.installing;
+            if (!nw) return;
+            nw.addEventListener("statechange", () => {
+              if (nw.state === "installed" && navigator.serviceWorker.controller) {
+                // Nuovo SW pronto: mostra banner invece di ricaricare in silenzio
+                _swWaiting = nw;
+                _showUpdateBar();
+              }
+            });
+          });
+        }).catch(err => console.warn("SW registration failed:", err));
+      });
+
+      // Quando il SW prende il controllo (dopo SKIP_WAITING), ricarica
+      navigator.serviceWorker.addEventListener("controllerchange", _swReload);
+      // Fallback via messaggio esplicito
+      navigator.serviceWorker.addEventListener("message", event => {
+        if (event.data?.type === "SW_UPDATED") _swReload();
+      });
+    }
+  </script>
+</body>
+
+</html>

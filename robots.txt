@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /.netlify/
+Disallow: /netlify/
+Disallow: /.env
+Disallow: /node_modules/
+
+# Sitemap
+Sitemap: https://fantaarena.it/premier/sitemap.xml

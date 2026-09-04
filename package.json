@@ -1,0 +1,9 @@
+{
+  "name": "fantapremier",
+  "version": "1.0.0",
+  "description": "ArenaBPL — Fantasy Premier League 2026/27",
+  "dependencies": {
+    "firebase-admin": "^12.0.0",
+    "web-push": "^3.6.7"
+  }
+}

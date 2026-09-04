@@ -1,0 +1,93 @@
+{
+  "rules": {
+
+    // ── Stato globale (voti, giornataCorrente, giocatoriSquadra) ──
+    // Lettura: tutti (serve anche senza login per la home pubblica)
+    // Scrittura: SOLO l'account superadmin (uid hardcoded qui sotto). Il poller
+    // scrive via Admin SDK e bypassa comunque queste regole.
+    "global": {
+      ".read": true,
+      ".write": "auth != null && auth.uid === 'MUzTsgbmvHOuOc3wEAfNnAeIv4M2'"
+    },
+
+    // ── Indice leghe (solo dati NON sensibili) ────────────────────
+    // Mirror di meta usato da lobby/elenco pubblico/ricerca codice, così il
+    // client non deve più leggere l'intero nodo `leghe` (che ora è protetto).
+    "indice": {
+      ".read": true,
+      ".write": "auth != null && auth.uid === 'MUzTsgbmvHOuOc3wEAfNnAeIv4M2'",
+      "$legaId": {
+        ".write": "auth != null && (!root.child('leghe').child($legaId).child('meta').exists() || root.child('leghe').child($legaId).child('meta').child('adminUid').val() === auth.uid)"
+      }
+    },
+
+    // ── Leghe ─────────────────────────────────────────────────────
+    // NIENTE .read globale: le sotto-chiavi sensibili sono leggibili solo dai
+    // membri della lega (chi ha un nodo playerRose/$uid) o dall'admin.
+    "leghe": {
+      ".write": "auth != null && auth.uid === 'MUzTsgbmvHOuOc3wEAfNnAeIv4M2'",
+      "$legaId": {
+        // Creazione (prima volta) o modifica completa da parte dell'adminUid
+        ".write": "auth != null && (!data.exists() || data.child('meta').child('adminUid').val() === auth.uid)",
+
+        // Meta: leggibile da tutti (nome/pubblica/codice/adminUid — non sensibili);
+        // serve a lobby, join, validazione codice.
+        "meta": {
+          ".read": true,
+          ".write": "auth != null && (!data.exists() || data.child('adminUid').val() === auth.uid)"
+        },
+
+        // State: solo membri/admin.
+        "state": {
+          ".read": "auth != null && (root.child('leghe').child($legaId).child('playerRose').child(auth.uid).exists() || root.child('leghe').child($legaId).child('meta').child('adminUid').val() === auth.uid)",
+          ".write": "auth != null && root.child('leghe').child($legaId).child('meta').child('adminUid').val() === auth.uid"
+        },
+
+        // playerSostituzioni: lettura solo membri/admin; ogni utente scrive solo il proprio nodo.
+        "playerSostituzioni": {
+          ".read": "auth != null && (root.child('leghe').child($legaId).child('playerRose').child(auth.uid).exists() || root.child('leghe').child($legaId).child('meta').child('adminUid').val() === auth.uid)",
+          "$uid": {
+            ".read": "auth != null && auth.uid === $uid",
+            ".write": "auth != null && auth.uid === $uid"
+          }
+        },
+
+        // playerRose: lettura solo membri/admin; ogni utente scrive/legge SOLO il proprio nodo
+        // (il read del proprio nodo serve per iscriversi/entrare — vedi _ensureMyMembership).
+        "playerRose": {
+          ".read": "auth != null && (root.child('leghe').child($legaId).child('playerRose').child(auth.uid).exists() || root.child('leghe').child($legaId).child('meta').child('adminUid').val() === auth.uid)",
+          "$uid": {
+            ".read": "auth != null && auth.uid === $uid",
+            ".write": "auth != null && auth.uid === $uid"
+          }
+        },
+
+        // pushSubscriptions: scritte via Admin SDK; lettura solo adminUid.
+        "pushSubscriptions": {
+          ".read": "auth != null && root.child('leghe').child($legaId).child('meta').child('adminUid').val() === auth.uid",
+          ".write": false
+        },
+
+        // Altri path (chat, ecc.): lettura membri/admin, scrittura solo adminUid.
+        "$other": {
+          ".read": "auth != null && (root.child('leghe').child($legaId).child('playerRose').child(auth.uid).exists() || root.child('leghe').child($legaId).child('meta').child('adminUid').val() === auth.uid)",
+          ".write": "auth != null && root.child('leghe').child($legaId).child('meta').child('adminUid').val() === auth.uid"
+        }
+      }
+    },
+
+    // ── Dati per utente (lista leghe seguite) ─────────────────────
+    "users": {
+      "$uid": {
+        ".read": "auth != null && auth.uid === $uid",
+        ".write": "auth != null && auth.uid === $uid"
+      }
+    },
+
+    // ── Qualsiasi altro path: blocca tutto ────────────────────────
+    "$other": {
+      ".read": false,
+      ".write": false
+    }
+  }
+}
