@@ -3,15 +3,28 @@
 // ============================================================
 
 // Lista 20 club Premier League 2026/27 (Monza, Venezia, Frosinone neopromosse)
-// ⚠️ TODO ArenaBPL — lista PROVVISORIA (Premier League 2025/26): finalizzare
-// dai nomi ESATTI del JSON delle rose (come per la Champions), così le chiavi
-// combaciano col DB giocatori. Attenzione ai naming SofaScore (es. "Liverpool"
-// vs "Liverpool FC", "Bournemouth", "Brighton & Hove Albion").
+// SQUADRE Premier League 2026/27 (nomi esatti dal calendario/rose SofaScore)
 const SQUADRE = [
-  "Arsenal", "Aston Villa", "Bournemouth", "Brentford", "Brighton & Hove Albion",
-  "Burnley", "Chelsea", "Crystal Palace", "Everton", "Fulham",
-  "Leeds United", "Liverpool", "Manchester City", "Manchester United", "Newcastle United",
-  "Nottingham Forest", "Sunderland", "Tottenham Hotspur", "West Ham United", "Wolverhampton Wanderers",
+  "Arsenal",
+  "Aston Villa",
+  "Bournemouth",
+  "Brentford",
+  "Brighton & Hove Albion",
+  "Chelsea",
+  "Coventry City",
+  "Crystal Palace",
+  "Everton",
+  "Fulham",
+  "Hull City",
+  "Ipswich Town",
+  "Leeds United",
+  "Liverpool FC",
+  "Manchester City",
+  "Manchester United",
+  "Newcastle United",
+  "Nottingham Forest",
+  "Sunderland",
+  "Tottenham Hotspur",
 ];
 const NAZIONALI = SQUADRE; // legacy alias
 
@@ -4539,8 +4552,7 @@ function _renderGiocTabellone() {
 // ── LA MIA SQUADRA ───────────────────────────────────────────
 const ROSA_REQUISITI = { P:3, D:6, C:6, A:5 };
 const ROSA_TOTALE    = 20; // 3+6+6+5 — 1 giocatore per club Premier League (20 club)
-// ⚠️ TODO ArenaBPL — finalizzare dalle date del calendario Premier League 2026/27
-const DEADLINE_ISO   = "2026-08-14T18:00:00Z"; // provvisoria: prima della G1 Premier League 2026/27
+const DEADLINE_ISO   = "2026-08-21T19:00:00Z"; // prima partita PL 2026/27 (deadline rose)
 const FINALE_ISO     = "2027-05-24T00:00:00Z"; // provvisoria: dopo la G38 Premier League 2026/27
 
 function isDeadlinePassata() {
