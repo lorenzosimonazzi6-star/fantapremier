@@ -56,7 +56,7 @@ const SUPERADMIN_PWD_HASH="b056fab42da260419217a7de0a31d107bd6fd385d5b3a03f9f168
 // Gate REALE del pannello superadmin: deve combaciare con l'uid autorizzato a
 // scrivere /global nelle regole RTDB. La password da sola (hash nel sorgente)
 // non è un confine di sicurezza.
-const SUPERADMIN_UID="TODO_SUPERADMIN_UID"; // ArenaBPL: UID dell'account superadmin nel NUOVO progetto Firebase
+const SUPERADMIN_UID="8SADsDk2dTbPBRWAFvUqH6xRgo93"; // ArenaBPL: UID dell'account superadmin nel NUOVO progetto Firebase
 let superadminUnlocked=false;
 let currentLegaId=null;
 let currentLegaMeta=null;
